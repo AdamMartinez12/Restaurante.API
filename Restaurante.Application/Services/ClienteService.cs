@@ -65,5 +65,18 @@ namespace Restaurante.Application.Services
             return itemFromDb;
         }
 
+        public async Task<bool> DeleteCliente(int ClienteId)
+        {
+            var ClientefromDb = await GetDbCliente(ClienteId);
+            if (ClientefromDb == null)
+            {
+                return false;
+            }
+
+            _context.Cliente.Remove(ClientefromDb);
+            await _context.SaveChangesAsync();
+            return true;
+        }
+
     }
 }

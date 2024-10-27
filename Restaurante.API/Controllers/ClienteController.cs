@@ -65,6 +65,19 @@ namespace Restaurante.API.Controllers
             return BadRequest(ModelState);
         }
 
+        [HttpDelete(Name = "DeleteCliente")]
+        public async Task<IActionResult> Delete(int ClienteId)
+        {
+
+            bool clienteEliminado = await _service.DeleteCliente(ClienteId);
+            if (clienteEliminado == false)
+            {
+                return NotFound("Cliente no encontrado");
+            }
+
+           return NoContent();
+        }
+
 
 
     }
