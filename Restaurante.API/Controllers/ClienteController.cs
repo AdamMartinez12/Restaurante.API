@@ -65,7 +65,7 @@ namespace Restaurante.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpDelete(Name = "DeleteCliente")]
+        [HttpDelete("{ClienteId}", Name = "DeleteCliente")]
         public async Task<IActionResult> Delete(int ClienteId)
         {
 
