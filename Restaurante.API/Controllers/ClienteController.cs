@@ -7,11 +7,11 @@ namespace Restaurante.API.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class RestauranteController : ControllerBase
+    public class ClienteController : ControllerBase
     {
         private readonly RestauranteService _service;
 
-        public RestauranteController(RestauranteService service)
+        public ClienteController(RestauranteService service)
         {
             _service = service;
         }
