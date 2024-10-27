@@ -5,15 +5,19 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restaurante.Domain.Models.Entities
+namespace Restaurante.Application.Dtos
 {
-    public class Cliente
+    public class CreateCliente
     {
-        [Key]
-        public int ClienteId { get; set; }
-        public string Nombre { get; set; }
+        [Required]
+        [MaxLength(50)]
+        public string   Nombre { get; set; }
+
+       
+        [MaxLength(15)]
         public string? Telefono { get; set; }
 
+        [MaxLength(100)]
         public string? Email { get; set; }
     }
 }
