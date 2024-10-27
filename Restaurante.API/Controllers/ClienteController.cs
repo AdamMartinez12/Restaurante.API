@@ -43,6 +43,29 @@ namespace Restaurante.API.Controllers
         }
 
 
+        [HttpPut("{id}", Name = "UpdateCliente")]
+        public async Task<IActionResult> Update(int id, [FromBody] EditCliente model)
+        {
+            if (model == null || id != model.ClienteId)
+            {
+                return BadRequest("Los datos del cliente data son invalidos");
+            }
+            if (ModelState.IsValid)
+            {
+
+                var result = await _service.EditCliente(model);
+                if (result == null)
+                {
+                    return NotFound("Cliente no encontrado");
+                }
+
+                return Ok(result);
+            }
+
+            return BadRequest(ModelState);
+        }
+
+
 
     }
 }

@@ -24,6 +24,17 @@ namespace Restaurante.Application.Services
 
         }
 
+        private async Task<Cliente> GetDbCliente(int ClienteId)
+        {
+            return await _context.Cliente.FirstOrDefaultAsync(p => p.ClienteId == ClienteId);
+        }
+
+        public async Task<ClienteDto> GetCliente(int ClienteId)
+        {
+            var itemFromDb = await GetDbCliente(ClienteId);
+            return new ClienteDto { ClienteId = ClienteId, Nombre = itemFromDb.Nombre, Telefono = itemFromDb.Telefono, Email = itemFromDb.Email };
+        }
+
         public async Task<Cliente> CreateCliente(CreateCliente model)
         {
             var newItemDb = new Cliente
@@ -36,6 +47,22 @@ namespace Restaurante.Application.Services
             _context.Cliente.Add(newItemDb);
             await _context.SaveChangesAsync();
             return newItemDb;
+        }
+
+        public async Task<Cliente> EditCliente(EditCliente model)
+        {
+            var itemFromDb = await GetDbCliente(model.ClienteId);
+            if (itemFromDb == null)
+            {
+                return null;
+            }
+            itemFromDb.Nombre = model.Nombre;
+            itemFromDb.Telefono = model.Telefono;
+            itemFromDb.Email = model.Email;
+
+            _context.Cliente.Update(itemFromDb);
+            await _context.SaveChangesAsync();
+            return itemFromDb;
         }
 
     }
