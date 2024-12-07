@@ -1,5 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Restaurante.Application.Dtos;
+using Restaurante.Application.Dtos.Cliente;
 using Restaurante.Domain.Data;
 using Restaurante.Domain.Models.Entities;
 using System;

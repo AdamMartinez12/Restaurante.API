@@ -15,9 +15,12 @@ namespace Restaurante.Domain.Data
         {
         }
 
-        public DbSet<Cliente> Cliente { get; set; } 
+        public DbSet<Cliente> Cliente { get; set; }
+        public DbSet<Cliente> Mesas { get; set; }
+        public DbSet<Cliente> Menu { get; set; }
+        public DbSet<Cliente> Ordenes { get; set; }
+        public DbSet<Cliente> CliDetalleOrdenente { get; set; }
+        public DbSet<Cliente> Reservaciones { get; set; }
 
-
-        
     }
 }

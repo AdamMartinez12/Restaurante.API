@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Restaurante.Application;
-using Restaurante.Application.Dtos;
+using Restaurante.Application.Dtos.Cliente;
 using Restaurante.Application.Services;
 using Restaurante.Domain.Models.Entities;
 

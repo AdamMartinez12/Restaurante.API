@@ -5,11 +5,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restaurante.Application.Dtos
+namespace Restaurante.Application.Dtos.Cliente
 {
     public class EditCliente : ClienteDto
     {
-        
-        
+
+
     }
 }
