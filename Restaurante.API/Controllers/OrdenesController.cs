@@ -6,8 +6,7 @@ using Restaurante.Domain.Models.Entities;
 
 namespace Restaurante.API.Controllers
 {
-    [ApiController]
-    [Route("[controller]")]
+ 
 
     public class OrdenesController : ControllerBase
     {
@@ -42,7 +41,7 @@ namespace Restaurante.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut("{id}", Name = "UpdateOrden")]
+        [HttpPut("{IdOrden}", Name = "UpdateOrden")]
         public async Task<IActionResult> Update(int id, [FromBody] EditOrdenes model)
         {
             if (model == null || id != model.IdOrden)

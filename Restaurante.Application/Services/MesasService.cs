@@ -24,7 +24,7 @@ namespace Restaurante.Application.Services
 
         private async Task<Mesas> GetDbMesas(int IdMesa)
         {
-            return await _context.Mesas.FirstOrDefaultAsync(m => m.IdMesa == IdMesa);
+            return await _context.Mesas.FirstOrDefaultAsync(p => p.IdMesa == IdMesa);
         }
 
    

@@ -42,7 +42,7 @@ namespace Restaurante.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut("{id}", Name = "UpdateMesas")]
+        [HttpPut("{IdMesas}", Name = "UpdateMesas")]
         public async Task<IActionResult> Update(int id, [FromBody] EditMesas model)
         {
             if (model == null || id != model.IdMesa)
@@ -63,7 +63,7 @@ namespace Restaurante.API.Controllers
 
             return BadRequest(ModelState);
         }
-        [HttpDelete("{IdMesa}", Name = "DeleteMesas")]
+        [HttpDelete("{IdMesas}", Name = "DeleteMesas")]
         public async Task<IActionResult> Delete(int IdMesa)
         {
 
