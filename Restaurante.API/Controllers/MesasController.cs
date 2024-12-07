@@ -24,7 +24,7 @@ namespace Restaurante.API.Controllers
             return MesasFromDb;
         }
 
-        [HttpPost(Name = "Createmesas")]
+        [HttpPost(Name = "CreateMesas")]
         public async Task<IActionResult> Create([FromBody] CreateMesas model)
         {
             if (model == null)

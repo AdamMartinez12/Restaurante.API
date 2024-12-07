@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restaurante.Application.Dtos.Mesas
+namespace Restaurante.Application.Dtos.Ordenes
 {
-    public class EditMesas : MesasDto
+    public class EditOrdenes : OrdenesDto
     {
-       
     }
 }

@@ -24,7 +24,7 @@ namespace Restaurante.Application.Services
 
         private async Task<Mesas> GetDbMesas(int IdMesa)
         {
-            return await _context.Mesas.FirstOrDefaultAsync(p => p.IdMesa == IdMesa)
+            return await _context.Mesas.FirstOrDefaultAsync(m => m.IdMesa == IdMesa);
         }
 
    
@@ -72,7 +72,7 @@ namespace Restaurante.Application.Services
                 return false;
             }
 
-            _context.Cliente.Remove(MesasfromDb);
+            _context.Mesas.Remove(MesasfromDb);
             await _context.SaveChangesAsync();
             return true;
         }
