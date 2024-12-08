@@ -20,7 +20,8 @@ namespace Restaurante.API.Controllers
         [HttpGet(Name = "GetCliente")]
         public async Task<IEnumerable<Cliente>> Get()
         {
-            var ClientesFromDb = await _service.GetClientes();
+            var ClientesFromDb = await _service.GetClientes
+                ();
             return ClientesFromDb;
         }
 

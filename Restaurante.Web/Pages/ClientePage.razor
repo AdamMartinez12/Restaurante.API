@@ -1,0 +1,27 @@
+﻿@inject HttpClient Http
+
+<h3>Gestión de Clientes</h3>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>Nombre</th>
+            <th>Correo</th>
+            <th>Teléfono</th>
+            
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var cliente in Clientes)
+        {
+            <tr>
+                <td>@cliente.Nombre</td>
+                <td>@cliente.Telefono</td>
+                <td>@cliente.Email</td>
+            </tr>
+        }
+    </tbody>
+    </table>
+<button class="btn btn-success" @onclick="NuevoCliente">Agregar Cliente</button>
+

@@ -1,49 +1,265 @@
 ﻿<!DOCTYPE html>
-<html lang="en">
+<html class="wide wow-animation" lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>@ViewData["Title"] - Restaurante.Web</title>
-    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
-    <link rel="stylesheet" href="~/css/site.css" asp-append-version="true" />
-    <link rel="stylesheet" href="~/Restaurante.Web.styles.css" asp-append-version="true" />
+    <title>Home</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, height=device-height, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="icon" href="~/Design/images/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" type="text/css" href="~/Design///fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700,900">
+    <link rel="stylesheet" href="~/Design/css/bootstrap.css">
+    <link rel="stylesheet" href="~/Design/css/fonts.css">
+    <link rel="stylesheet" href="~/Design/css/style.css">
+    <style>
+        .ie-panel {
+            display: none;
+            background: #212121;
+            padding: 10px 0;
+            box-shadow: 3px 3px 5px 0 rgba(0,0,0,.3);
+            clear: both;
+            text-align: center;
+            position: relative;
+            z-index: 1;
+        }
+
+        html.ie-10 .ie-panel, html.lt-ie-10 .ie-panel {
+            display: block;
+        }
+    </style>
 </head>
 <body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-light bg-white border-bottom box-shadow mb-3">
-            <div class="container-fluid">
-                <a class="navbar-brand" asp-area="" asp-controller="Home" asp-action="Index">Restaurante.Web</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between">
-                    <ul class="navbar-nav flex-grow-1">
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <div class="container">
-        <main role="main" class="pb-3">
-            @RenderBody()
-        </main>
+    <div class="ie-panel"><a href="http://windows.microsoft.com/en-US/internet-explorer/"><img src="~/Design/images/ie8-panel/warning_bar_0000_us.jpg" height="42" width="820" alt="You are using an outdated browser. For a faster, safer browsing experience, upgrade for free today."></a></div>
+    <div class="preloader">
+        <div class="loader">
+            <div class="ball"></div>
+            <div class="ball"></div>
+            <div class="ball"></div>
+        </div>
     </div>
 
-    <footer class="border-top footer text-muted">
-        <div class="container">
-            &copy; 2024 - Restaurante.Web - <a asp-area="" asp-controller="Home" asp-action="Privacy">Privacy</a>
+    <div class="page">
+        <div class="position-relative">
+            <header class="section page-header" id="programs">
+                <!--RD Navbar-->
+                <div class="rd-navbar-wrap">
+                    <nav class="rd-navbar rd-navbar-classic context-dark" data-layout="rd-navbar-fixed" data-sm-layout="rd-navbar-fixed" data-md-layout="rd-navbar-fixed" data-lg-layout="rd-navbar-fixed" data-xl-layout="rd-navbar-static" data-xxl-layout="rd-navbar-static" data-md-device-layout="rd-navbar-fixed" data-lg-device-layout="rd-navbar-fixed" data-xl-device-layout="rd-navbar-static" data-xxl-device-layout="rd-navbar-static" data-lg-stick-up-offset="10px" data-xl-stick-up-offset="10px" data-xxl-stick-up-offset="10px" data-lg-stick-up="true" data-xl-stick-up="true" data-xxl-stick-up="true">
+                        <div class="rd-navbar-main-outer">
+                            <div class="rd-navbar-main">
+                                <!--RD Navbar Panel-->
+
+                                <div class="rd-navbar-nav-wrap">
+                                    <ul class="rd-navbar-nav">
+                                        <li class="rd-nav-item">
+                                            <a class="rd-nav-link" href="#programs">
+                                                Restaurante
+                                            </a>
+                                        </li>
+                                        <li class="rd-nav-item">
+                                            <a class="rd-nav-link" href="#programs">Inicio</a>
+                                        </li>
+                                        <li class="rd-nav-item">
+                                            <a class="rd-nav-link" href="#about">Sobre</a>
+                                        </li>
+                                        <li class="rd-nav-item">
+                                            <a class="rd-nav-link" href="#clients">Clientes</a>
+                                        </li> 
+                                        <li class="rd-nav-item">
+                                            <a class="rd-nav-link" data-custom-toggle="#rd-navbar-aside">Acceder</a>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="rd-navbar-aside" id="rd-navbar-aside">
+                            <h3 class="TituloLogin">Restaurante</h3>
+                            <!--RD Mailform-->
+                            <div class="row row-27">
+                                <!-- Product-->
+                                <div class="product novi-bg bg-default">
+
+                                    <p style="text-align:justify">
+                                        <strong>Caf-Xperience</strong> es un sistema integral de gestión de cafeterías que crea un entorno digital unificado para administrar todas las operaciones de una cafetería. Facilita la comunicación entre el personal, optimiza la gestión de inventarios, proveedores y ventas.
+                                    </p>
+                                    .
+                                </div>
+
+                                <br />
+                                <div class="col-12" id="PoscionBotones">
+                                    <a class="button button-primary" href="@Url.Action("Login","Usuarios")">Acceder como Empleado o Cliente</a>
+                                    <a class="button button-primary" href="@Url.Action("RegistrarCliente","Usuarios")">Registrate como Cliente</a>
+                                </div>
+                            </div>
+                        </div>
+                    </nav>
+                </div>
+            </header>
+
+
         </div>
-    </footer>
-    <script src="~/lib/jquery/dist/jquery.min.js"></script>
-    <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="~/js/site.js" asp-append-version="true"></script>
-    @await RenderSectionAsync("Scripts", required: false)
+        <!--Swiper-->
+        <section class="section swiper-container swiper-slider bg-primary" data-autoplay="3500" data-loop="false" data-simulate-touch="false" data-effect="circle-bg" data-speed="750">
+            <div class="swiper-bg-text">Comida</div>
+            <div class="swiper-wrapper">
+                <div class="swiper-slide" data-circle-cx=".855" data-circle-cy=".5" data-circle-r=".39">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container">
+                            <div class="row row-50 align-items-center swiper-custom-row">
+                                <div class="col-lg-5">
+                                    <h3 class="subtitle" data-swiper-anime='{"animation":"swiperContentRide","duration":900,"delay":900}'>Bienvenidos a Caf-Xperience</h3>
+                                    <h1 data-swiper-anime='{"animation":"swiperContentRide","duration":1000,"delay":1000}' data-subtext="#1">Servicio de Entrega</h1>
+                                    <p class="big" data-swiper-anime='{"animation":"swiperContentRide","duration":1100,"delay":1100}'>Caf-Xperience ofrece entrega rápida de alimentos orgánicos y Saludables.</p>
+                                    <p class="postitle" data-swiper-anime='{"animation":"swiperContentRide","duration":1200,"delay":1200}'>Porque Seleccionar Caf-Xperience</p>
+                                </div>
+                                <div class="box-round-wrap">
+                                    <img src="~/Design/images/slider-01-671x671.png" alt="" width="671" height="335" data-swiper-anime='{"animation":"swiperContentFade","duration":1000,"delay":1000}' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-circle-cx=".855" data-circle-cy=".5" data-circle-r=".39">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container">
+                            <div class="row row-50 align-items-center swiper-custom-row">
+                                <div class="col-lg-5">
+                                    <h3 class="subtitle" data-swiper-anime='{"animation":"swiperContentRide","duration":900,"delay":900}'>Entrega que piensa en ti</h3>
+                                    <h1 data-swiper-anime='{"animation":"swiperContentRide","duration":1000,"delay":1000}' data-subtext="250">Ubicaciones compatibles</h1>
+                                    <p class="big" data-swiper-anime='{"animation":"swiperContentRide","duration":1100,"delay":1100}'>Nuestro servicio de entrega de comida está disponible en toda la universidad..</p>
+                                    <p class="postitle" data-swiper-anime='{"animation":"swiperContentRide","duration":1200,"delay":1200}'>Entrega a nivel nacional</p>
+                                </div>
+                                <div class="box-round-wrap">
+                                    <img src="~/Design/images/slider-04-671x671.png" alt="" width="671" height="335" data-swiper-anime='{"animation":"swiperContentFade","duration":1000,"delay":1000}' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-circle-cx=".855" data-circle-cy=".5" data-circle-r=".39">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container">
+                            <div class="row row-50 align-items-center swiper-custom-row">
+                                <div class="col-lg-5">
+                                    <h3 class="subtitle" data-swiper-anime='{"animation":"swiperContentRide","duration":900,"delay":900}'>Los mejores platos e ingredientes</h3>
+                                    <h1 data-swiper-anime='{"animation":"swiperContentRide","duration":1000,"delay":1000}' data-subtext="100%">Comida deliciosa</h1>
+                                    <p class="big" data-swiper-anime='{"animation":"swiperContentRide","duration":1100,"delay":1100}'>Caf-Xperience actualiza periódicamente los menús para asegurarse de que nuestros clientes coman la mejor y más sabrosa comida..</p>
+                                    <p class="postitle" data-swiper-anime='{"animation":"swiperContentRide","duration":1200,"delay":1200}'>Ingredientes orgánicos</p>
+                                </div>
+                                <div class="box-round-wrap">
+                                    <img src="~/Design/images/slider-03-671x671.png" alt="" width="671" height="335" data-swiper-anime='{"animation":"swiperContentFade","duration":1000,"delay":1000}' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide" data-circle-cx=".855" data-circle-cy=".5" data-circle-r=".39">
+                    <div class="swiper-slide-caption section-md">
+                        <div class="container">
+                            <div class="row row-50 align-items-center swiper-custom-row">
+                                <div class="col-lg-5">
+                                    <h3 class="subtitle" data-swiper-anime='{"animation":"swiperContentRide","duration":900,"delay":900}'>Nuestros clientes confían en nosotros</h3>
+                                    <h1 data-swiper-anime='{"animation":"swiperContentRide","duration":1000,"delay":1000}' data-subtext="3k">Reseñas positivas</h1>
+                                    <p class="big" data-swiper-anime='{"animation":"swiperContentRide","duration":1100,"delay":1100}'>Las opiniones de nuestros clientes son la mejor manera de conocer más sobre nuestro servicio de entrega de comida..</p>
+                                    <p class="postitle" data-swiper-anime='{"animation":"swiperContentRide","duration":1200,"delay":1200}'>Reseñas y testimonios</p>
+                                </div>
+                                <div class="box-round-wrap">
+                                    <img src="~/Design/images/slider-04-671x671.png" alt="" width="671" height="335" data-swiper-anime='{"animation":"swiperContentFade","duration":1000,"delay":1000}' />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Swiper Pagination-->
+            <div class="swiper-pagination"></div>
+        </section>
+
+        @RenderBody()
+
+
+
+        <footer class="section footer-classic">
+          
+
+            <div class="container">
+                <div class="row row-50 justify-content-between">
+                    <div class="col-xl-3 col-md-6">
+                        <!--Brand--><a class="brand" href="index.html"><img class="brand-logo-dark" src="~/Design/images/logo-default-363x100.png" alt="" width="181" height="50" /><img class="brand-logo-light" src="~/Design/images/logo-inverse-363x100.png" alt="" width="181" height="50" /></a>
+                        <p class="rights"><span>&copy;&nbsp;</span><span class="copyright-year"></span><span>&nbsp;</span><span>Plate</span><span>.&nbsp;All Rights Reserved. Design by Zemez</span></p>
+                    </div>
+                    <div class="col-xl-3 col-md-6">
+                        <p class="footer-classic-title">Contacts</p>
+                        <ul class="footer-classic-list">
+                            <li>
+                                <ul>
+                                    <li>
+                                        <dl class="footer-classic-dl">
+                                            <dt>Ph.</dt>
+                                            <dd><a href="tel:#">1-800-123-1234</a></dd>
+                                        </dl>
+                                    </li>
+                                    <li>
+                                        <dl class="footer-classic-dl">
+                                            <dt>Mail.</dt>
+                                            <dd><a href="mailto:#">Info@demolink.org</a></dd>
+                                        </dl>
+                                    </li>
+                                </ul>
+                            </li>
+                            <li><a href="#">8439 Pierce Court Sacramento, CA 95820</a></li>
+                            <li>
+                                <ul class="group group-sm footer-classic-social-list">
+                                    <li>
+                                        <a class="link-social" href="#">
+                                            <div class="icon novi-icon mdi mdi-facebook"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="link-social" href="#">
+                                            <div class="icon novi-icon mdi mdi-instagram"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a class="link-social" href="#">
+                                            <div class="icon novi-icon mdi mdi-youtube-play"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-md-6">
+                        <p class="footer-classic-title">Quick Links</p>
+                        <ul class="footer-classic-nav">
+                            <li><a href="#">How It Works</a></li>
+                            <li><a href="#">About</a></li>
+                            <li><a href="#">Why Choose Us</a></li>
+                        </ul>
+                    </div>
+                    <div class="col-xl-2 col-md-6">
+                        <p class="footer-classic-title">Food Packages</p>
+                        <ul class="footer-classic-nav">
+                            <li><a href="#">Detox</a></li>
+                            <li><a href="#">Balanced</a></li>
+                            <li><a href="#">Vegan</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
+
+
+
+
+
+
+
+
+
+    <div class="snackbars" id="form-output-global"></div>
+    <script src="~/Design/js/core.min.js"></script>
+    <script src="~/Design/js/script.js"></script>
+    <!--coded by kraken-->
 </body>
 </html>
