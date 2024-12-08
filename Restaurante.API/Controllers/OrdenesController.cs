@@ -6,8 +6,9 @@ using Restaurante.Domain.Models.Entities;
 
 namespace Restaurante.API.Controllers
 {
- 
 
+    [ApiController]
+    [Route("[controller]")]
     public class OrdenesController : ControllerBase
     {
         private readonly OrdenesService _service;

@@ -1,15 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restaurante.Domain.Models.Entities
+namespace Restaurante.Application.Dtos.DetalleOrden
 {
-    public class DetalleOrden
+    public class DetalleOrdenDto
     {
-        [Key]
         public int IdDetalle { get; set; }
         public int IdOrden { get; set; }
         public int IdMenu { get; set; }

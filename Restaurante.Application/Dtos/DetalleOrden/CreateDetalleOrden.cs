@@ -5,14 +5,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Restaurante.Domain.Models.Entities
+namespace Restaurante.Application.Dtos.DetalleOrden
 {
-    public class DetalleOrden
+    public class CreateDetalleOrden
     {
-        [Key]
-        public int IdDetalle { get; set; }
+        [Required]
         public int IdOrden { get; set; }
+        [Required]
         public int IdMenu { get; set; }
+        [Required]
         public int Cantidad { get; set; }
     }
 }
