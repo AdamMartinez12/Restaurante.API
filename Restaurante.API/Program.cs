@@ -9,6 +9,11 @@ builder.Services.AddDbContext<Restaurante.Domain.Data.RestauranteDbContext>(opti
     options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddScoped<ClienteService>();
+builder.Services.AddScoped<DetalleOrdenService>();
+builder.Services.AddScoped<MenuService>();
+builder.Services.AddScoped<MesasService>();
+builder.Services.AddScoped<OrdenesService>();
+builder.Services.AddScoped<ReservacionesService>();
 
 
 builder.Services.AddControllers();
