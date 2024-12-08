@@ -6,7 +6,6 @@ using Restaurante.Domain.Models.Entities;
 
 namespace Restaurante.API.Controllers
 {
-
     [ApiController]
     [Route("[controller]")]
     public class OrdenesController : ControllerBase
@@ -17,6 +16,7 @@ namespace Restaurante.API.Controllers
         {
             _service = service;
         }
+
         [HttpGet(Name = "GetOrdenes")]
         public async Task<IEnumerable<Ordenes>> Get()
         {
@@ -24,7 +24,7 @@ namespace Restaurante.API.Controllers
             return OrdenesFromDb;
         }
 
-        [HttpPost(Name = "CreateCliente")]
+        [HttpPost(Name = "CreateOrdenes")]
         public async Task<IActionResult> Create([FromBody] CreateOrdenes model)
         {
             if (model == null)
@@ -42,7 +42,7 @@ namespace Restaurante.API.Controllers
             return BadRequest(ModelState);
         }
 
-        [HttpPut("{IdOrden}", Name = "UpdateOrden")]
+        [HttpPut("{id}", Name = "UpdateOrden")]
         public async Task<IActionResult> Update(int id, [FromBody] EditOrdenes model)
         {
             if (model == null || id != model.IdOrden)
