@@ -1,7 +1,16 @@
+using Microsoft.EntityFrameworkCore;
+using Restaurante.Application.Services;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+
+builder.Services.AddDbContext<Restaurante.Domain.Data.RestauranteDbContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DefaultConnection")));
+
+builder.Services.AddScoped<ClienteService>();
+
 
 var app = builder.Build();
 
@@ -12,6 +21,9 @@ if (!app.Environment.IsDevelopment())
     // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
+
+app.UseCors("AllowLocalhost"); 
+
 
 app.UseHttpsRedirection();
 app.UseStaticFiles();
